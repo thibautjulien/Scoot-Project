@@ -1,0 +1,56 @@
+/* Couleurs */
+$yellow: #fcb72b;
+$darkNavy: #495567;
+$dimGrey: #939caa;
+$lightGrey: #e5ecf4;
+$snow: #f2f5f9;
+$lightYellow: #fff4df;
+
+/* Polices */
+$spaceMono: "Space Mono";
+$lexendDeca: "Lexend Deca";
+
+/* Titres + Body */
+@mixin h1 {
+    font-size: 56px;
+    font-family: $spaceMono;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+    color: #495567;
+}
+
+@mixin h2 {
+    font-size: 48px;
+    font-family: $spaceMono;
+    line-height: 48px;
+    letter-spacing: -2.14px;
+    color: #495567;
+}
+
+@mixin h3 {
+    font-size: 40px;
+    font-family: $spaceMono;
+    line-height: 48px;
+    letter-spacing: -1.79px;
+    color: #495567;
+}
+
+@mixin h4 {
+    font-size: 24px;
+    font-family: $spaceMono;
+    line-height: 28px;
+    letter-spacing: -1.07px;
+    color: #495567;
+}
+
+@mixin p {
+    font-size: 15px;
+    font-family: $lexendDeca;
+    line-height: 25px;
+    font-weight: 300;
+    color: #495567;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
