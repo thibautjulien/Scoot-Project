@@ -1,5 +1,11 @@
+@use "variables.scss"; /* Liste des variables */
+
+/* Pages du site */
+@use "home.scss";
 @use "about.scss";
 @use "careers.scss";
-@use "home.scss";
 @use "locations.scss";
-@use "variables.scss";
+
+/* Modules */
+@use "header.scss";
+@use "footer.scss";
