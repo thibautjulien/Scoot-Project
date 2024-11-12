@@ -51,6 +51,17 @@ $lexendDeca: "Lexend Deca";
     color: #495567;
 }
 
+@mixin button {
+    width: 195px;
+    height: 53px;
+    background-color: $yellow;
+    color: white;
+    font-family: $spaceMono;
+    line-height: 25px;
+    border: none;
+
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
