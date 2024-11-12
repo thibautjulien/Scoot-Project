@@ -45,9 +45,10 @@ ul {
     list-style: none;
 }
 
-li {
+li a{
     display: inline;
     margin: 10px;
+    text-decoration: none;
     @include variables.p;
 }
 
@@ -321,9 +322,10 @@ footer {
             list-style: none;
         }
         
-        li {
+        li a{
             display: inline;
             margin: 10px;
+            text-decoration: none;
             @include variables.p;
             color: white;
         }

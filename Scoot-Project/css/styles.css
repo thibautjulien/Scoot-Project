@@ -63,9 +63,10 @@ ul {
   list-style: none;
 }
 
-li {
+li a {
   display: inline;
   margin: 10px;
+  text-decoration: none;
   font-size: 15px;
   font-family: "Lexend Deca";
   line-height: 25px;
@@ -379,9 +380,10 @@ footer .bottom_page ul {
   flex-direction: row;
   list-style: none;
 }
-footer .bottom_page li {
+footer .bottom_page li a {
   display: inline;
   margin: 10px;
+  text-decoration: none;
   font-size: 15px;
   font-family: "Lexend Deca";
   line-height: 25px;
