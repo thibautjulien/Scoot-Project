@@ -38,6 +38,12 @@ header nav button {
   font-family: "Space Mono";
   line-height: 25px;
   border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+header nav button:hover {
+  background-color: white;
+  color: #fcb72b;
+  border: 1px solid #fcb72b;
 }
 
 nav {
@@ -121,8 +127,14 @@ li a {
   font-family: "Space Mono";
   line-height: 25px;
   border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
   margin-left: 350px;
   margin-top: 50px;
+}
+.intro button:hover {
+  background-color: white;
+  color: #fcb72b;
+  border: 1px solid #fcb72b;
 }
 
 .bloc1 {
@@ -169,7 +181,7 @@ li a {
   align-items: center;
   margin-left: 165px;
   margin-right: 100px;
-  justify-content: space-between;
+  justify-content: center;
 }
 .bloc2 article {
   display: flex;
@@ -210,6 +222,12 @@ li a {
   font-family: "Space Mono";
   line-height: 25px;
   border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.bloc2 button:hover {
+  background-color: white;
+  color: #fcb72b;
+  border: 1px solid #fcb72b;
 }
 
 .bloc3 {
@@ -261,6 +279,12 @@ li a {
   font-family: "Space Mono";
   line-height: 25px;
   border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.bloc3 button:hover {
+  background-color: white;
+  color: #fcb72b;
+  border: 1px solid #fcb72b;
 }
 
 .bloc4 {
@@ -314,6 +338,12 @@ li a {
   font-family: "Space Mono";
   line-height: 25px;
   border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.bloc4 button:hover {
+  background-color: white;
+  color: #fcb72b;
+  border: 1px solid #fcb72b;
 }
 
 footer {
