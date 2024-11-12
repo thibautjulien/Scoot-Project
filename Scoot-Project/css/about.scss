@@ -1,0 +1,85 @@
+@use "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.DisplayFeatures__Content {
+    width: 500px;
+}
+
+.DisplayFeatures__Content > h2 {
+    @include variables.h2;
+}
+
+.DisplayFeatures__Content > p {
+    @include variables.p;
+    margin-top: 20px;
+}
+
+.DisplayFeatures__Row1 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.DisplayFeatures__Row1 > .DisplayFeatures__Content {
+    grid-area: 1 / 1 / 2 / 3;
+    margin-left: 150px;
+}
+
+.DisplayFeatures__Row1 > .DisplayFeatures__Images {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.DisplayFeatures__Row1
+    > .DisplayFeatures__Images
+    > .DF__Images__Row1
+    img:first-child {
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.DisplayFeatures__Row1 > .DisplayFeatures__Images > .DF__Images__Row2 {
+    position: relative;
+}
+
+.DisplayFeatures__Row1
+    > .DisplayFeatures__Images
+    > .DF__Images__Row2
+    img:first-child {
+    position: absolute;
+    right: 0px;
+    top: -200px;
+}
+
+.DisplayFeatures__Row2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.DisplayFeatures__Row2
+    > .DisplayFeatures__Images
+    > .DF__Images__Row1
+    img:first-child {
+    position: relative;
+    top: 150px;
+}
+
+.DisplayFeatures__Row2
+    > .DisplayFeatures__Images
+    > .DF__Images__Row2
+    img:first-child {
+    margin-right: 50px;
+}
