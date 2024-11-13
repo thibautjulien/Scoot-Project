@@ -604,11 +604,6 @@ li a {
   margin-right: 165px;
   margin-bottom: 5%;
 }
-.map .Jakarta .NY .Yokohama .London {
-  position: absolute;
-  z-index: 5;
-  top: 0px;
-}
 
 .below_map {
   display: flex;
