@@ -68,6 +68,25 @@ $lexendDeca: "Lexend Deca";
   }
 }
 
+/* BREAKPOINT DESKTOP */
+$breakpoint-desktop-min: 1025px;
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop-min) {
+    @content;
+  }
+}
+
+/* BREAKPOINT TABLET */
+$breakpoint-tablet-min: 768px;
+$breakpoint-tablet-max: 1024px;
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+    @content;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
