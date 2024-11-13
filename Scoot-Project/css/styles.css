@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-header {
+.about-page > header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,7 +28,7 @@ header {
   height: 96px;
 }
 
-header nav button {
+.about-page header nav button {
   height: auto;
   margin-left: auto;
   width: 195px;
@@ -40,13 +40,13 @@ header nav button {
   border: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-header nav button:hover {
+.about-page header nav button:hover {
   background-color: white;
   color: #fcb72b;
   border: 1px solid #fcb72b;
 }
 
-nav {
+.about-page nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,7 +55,12 @@ nav {
   justify-content: center;
   margin: auto;
 }
-nav h4 {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-page nav {
+    margin: 0 10%;
+  }
+}
+.about-page nav h4 {
   font-size: 24px;
   font-family: "Space Mono";
   line-height: 28px;
@@ -140,9 +145,20 @@ li a {
   grid-area: 1/1/2/3;
   margin-left: 10%;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-DisplayFeatures__Row1 > .about-DisplayFeatures__Content {
+    margin-top: 5%;
+    text-align: center;
+  }
+}
 
 .about-DisplayFeatures__Row1 > .about-DisplayFeatures__Images {
   grid-area: 1/2/2/3;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-DisplayFeatures__Row1 > .about-DisplayFeatures__Images {
+    margin-left: auto;
+  }
 }
 
 .about-DisplayFeatures__Row1 > .about-DisplayFeatures__Images > .about-DF__Images__Row1 img:first-child {
