@@ -61,6 +61,7 @@ nav h4 {
   line-height: 28px;
   letter-spacing: -1.07px;
   color: #495567;
+  margin-right: 3.125rem;
 }
 
 ul {
@@ -381,6 +382,7 @@ footer .bottom_page {
   flex-direction: row;
   background-color: #333A44;
   justify-content: space-between;
+  height: 4rem;
 }
 footer .bottom_page .social_media {
   display: flex;
@@ -404,6 +406,313 @@ footer .bottom_page .nav_footer h4 {
   letter-spacing: -1.07px;
   color: #495567;
   color: white;
+  margin-right: 3.125rem;
+}
+footer .bottom_page ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+footer .bottom_page li a {
+  display: inline;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Lexend Deca";
+  line-height: 25px;
+  font-weight: 300;
+  color: #495567;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav h4 {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .intro {
+    height: auto;
+  }
+  .intro h1, .intro p, .intro button {
+    margin-left: 20px;
+  }
+  .bloc1, .bloc2, .bloc3, .bloc4 {
+    flex-direction: column;
+    margin: 0 20px;
+    width: auto;
+    align-items: flex-start;
+  }
+  .bloc1 article, .bloc2 article, .bloc3 article, .bloc4 article {
+    width: 100%;
+  }
+  .bloc1 img, .bloc2 img, .bloc3 img, .bloc4 img {
+    margin: 20px 0;
+  }
+  footer .text_footer, footer .bottom_page {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  footer .text_footer .dowload, footer .bottom_page .dowload {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    height: auto;
+  }
+  nav {
+    width: 100%;
+    flex-direction: column;
+  }
+  .intro {
+    height: auto;
+    padding: 20px;
+  }
+  .intro h1 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .intro p, .intro button {
+    width: 100%;
+    margin-left: 0;
+  }
+  .bloc1, .bloc2, .bloc3, .bloc4 {
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bloc1 article, .bloc2 article, .bloc3 article, .bloc4 article {
+    width: 100%;
+    text-align: center;
+  }
+  footer .text_footer, footer .bottom_page {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  footer .social_media, footer .nav_footer {
+    justify-content: center;
+    width: 100%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 96px;
+}
+
+header nav button {
+  height: auto;
+  margin-left: auto;
+  width: 195px;
+  height: 53px;
+  background-color: #fcb72b;
+  color: white;
+  font-family: "Space Mono";
+  line-height: 25px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+header nav button:hover {
+  background-color: white;
+  color: #fcb72b;
+  border: 1px solid #fcb72b;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 69.125rem;
+  height: auto;
+  justify-content: center;
+}
+nav h4 a {
+  font-size: 24px;
+  font-family: "Space Mono";
+  line-height: 28px;
+  letter-spacing: -1.07px;
+  color: #495567;
+  margin-right: 3.125rem;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+li a {
+  display: inline;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Lexend Deca";
+  line-height: 25px;
+  font-weight: 300;
+  color: #495567;
+}
+
+.title__page {
+  padding: 70px 10%;
+  background-image: url("../Pictures/header_background.svg");
+  margin-bottom: 6%;
+}
+.title__page h1 {
+  font-size: 56px;
+  font-family: "Space Mono";
+  line-height: 56px;
+  letter-spacing: -2.5px;
+  color: #495567;
+  color: white;
+  margin-left: 3%;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.map img {
+  margin-left: 165px;
+  margin-right: 165px;
+  margin-bottom: 5%;
+}
+.map .Jakarta .NY .Yokohama .London {
+  position: absolute;
+  z-index: 5;
+  top: 0px;
+}
+
+.below_map {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 165px;
+  margin-right: 165px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  align-items: center;
+}
+.below_map h2 {
+  font-size: 48px;
+  font-family: "Space Mono";
+  line-height: 48px;
+  letter-spacing: -2.14px;
+  color: #495567;
+  width: 21.938rem;
+}
+.below_map p {
+  font-size: 15px;
+  font-family: "Lexend Deca";
+  line-height: 25px;
+  font-weight: 300;
+  color: #495567;
+  width: 27.813rem;
+}
+.below_map button {
+  width: 195px;
+  height: 53px;
+  background-color: #fcb72b;
+  color: white;
+  font-family: "Space Mono";
+  line-height: 25px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 11.25rem;
+}
+.below_map button:hover {
+  background-color: white;
+  color: #fcb72b;
+  border: 1px solid #fcb72b;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #495567;
+  width: 100%;
+}
+footer .text_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 165px;
+  margin-right: 165px;
+  align-items: center;
+  height: 300px;
+}
+footer .text_footer .dowload {
+  width: 9.938rem;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+}
+footer .text_footer h2 {
+  font-size: 48px;
+  font-family: "Space Mono";
+  line-height: 48px;
+  letter-spacing: -2.14px;
+  color: #495567;
+  color: white;
+  width: 25.938rem;
+}
+footer .bottom_page {
+  display: flex;
+  flex-direction: row;
+  background-color: #333A44;
+  justify-content: space-between;
+  height: 4rem;
+}
+footer .bottom_page .social_media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 120px;
+  height: 24px;
+  margin-right: 165px;
+}
+footer .bottom_page .nav_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 69.125rem;
+  margin-left: 165px;
+}
+footer .bottom_page .nav_footer h4 {
+  font-size: 24px;
+  font-family: "Space Mono";
+  line-height: 28px;
+  letter-spacing: -1.07px;
+  color: #495567;
+  color: white;
+  margin-right: 3.125rem;
 }
 footer .bottom_page ul {
   display: flex;

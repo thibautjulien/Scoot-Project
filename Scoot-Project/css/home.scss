@@ -36,6 +36,7 @@ nav {
 
     h4{
         @include variables.h4;
+        margin-right: 3.125rem;
     }
 }
 
@@ -292,6 +293,7 @@ footer {
         flex-direction: row;
         background-color: #333A44;
         justify-content: space-between;
+        height: 4rem;
 
 
         .social_media {
@@ -313,6 +315,7 @@ footer {
             h4{
                 @include variables.h4;
                 color: white;
+                margin-right: 3.125rem;
             }
         }
         
@@ -331,4 +334,105 @@ footer {
         }
     }
 
+}
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    .intro {
+        height: auto;
+        h1, p, button {
+            margin-left: 20px;
+        }
+    }
+
+    .bloc1, .bloc2, .bloc3, .bloc4 {
+        flex-direction: column;
+        margin: 0 20px;
+        width: auto;
+        align-items: flex-start;
+
+        article {
+            width: 100%;
+        }
+
+        img {
+            margin: 20px 0;
+        }
+    }
+
+    footer .text_footer, footer .bottom_page {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        .dowload {
+            justify-content: center;
+        }
+    }
+}
+
+// Media Query pour Mobile (petits écrans)
+@media (max-width: 768px) {
+    header {
+        height: auto;
+    }
+
+    nav {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .intro {
+        height: auto;
+        padding: 20px;
+        
+        h1 {
+            width: 100%;
+            margin-left: 0;
+        }
+        
+        p, button {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    .bloc1, .bloc2, .bloc3, .bloc4 {
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+
+        article {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    footer {
+        .text_footer, .bottom_page {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        .social_media, .nav_footer {
+            justify-content: center;
+            width: 100%;
+        }
+    }
 }
