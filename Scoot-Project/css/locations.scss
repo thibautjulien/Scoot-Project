@@ -72,6 +72,9 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            @include variables.p;
+            line-height: 28px;
+            font-weight: bold;
         }
     }
 }
