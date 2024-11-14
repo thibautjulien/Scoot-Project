@@ -23,6 +23,12 @@
     }
 }
 
+.about-page > header > h4 {
+    @include variables.tablet {
+        margin-left: 10%;
+    }
+}
+
 .about-page > .about-header_button {
     height: auto;
     margin-left: auto;
