@@ -71,13 +71,53 @@ li a{
     align-items: center;
     position: relative;
     
-
-    img {
+    .big-map {
         margin-left: 165px;
         margin-right: 165px;
         margin-bottom: 5%;
+        width: 100%;
+        @include variables.mobile {
+            display: none;
+        }
     }
 
+    .mobile-map {
+
+        @include variables.tablet {
+            display: none;
+        }
+        @include variables.desktop {
+            display: none;
+        }
+    }
+}
+
+.country-mobile {
+    display : none;
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            background-color: #FFF4DF;
+            color: #495567;
+            width: 19.438rem;
+            text-align: center;
+            height: 4.5rem;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 .below_map {
@@ -103,6 +143,51 @@ li a{
     button {
         @include variables.button;
         width: 11.25rem;
+    }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+
+        p {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        button {
+            margin-bottom: 5rem;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+        width: 100vw;
+    
+        .map {
+            width: 100%;
+        }
+
+        h2 {
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        button {
+            margin-bottom: 5rem;
+        }
     }
 }
 
@@ -160,7 +245,7 @@ footer {
             width: 69.125rem;
             margin-left: 165px;
             
-            h4{
+            h4 a {
                 @include variables.h4;
                 color: white;
                 margin-right: 3.125rem;
