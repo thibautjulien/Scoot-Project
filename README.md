@@ -2,8 +2,8 @@
 
 ## About the project
 
-We had to reproduce a website model and thus also produce its versions for tablet and mobile support. 
-We had to do this work in a duo with a colleague from the training. 
+We had to reproduce a website model and also make its tablet and mobile versions. 
+We had to do this work in duo with a colleague from the training. 
 
 ## Learning objectives
 
