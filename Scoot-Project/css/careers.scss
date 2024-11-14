@@ -6,22 +6,36 @@
     box-sizing: border-box;
 }
 
-header {
+.careers-page > header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 96px;
+
+    h4 {
+        @include variables.h4;
+
+        @include variables.mobile {
+            margin: 0 auto;
+        }
+    }
 }
 
-header nav button {
+.careers-page > header > h4 {
+    @include variables.tablet {
+        margin-left: 10%;
+    }
+}
+
+.careers-page > .careers-header_button {
     height: auto;
     margin-left: auto;
     @include variables.button;
 }
 
-nav {
+.careers-header_menu {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -34,34 +48,21 @@ nav {
         margin: 0 10%;
     }
 
-    h4 {
-        @include variables.h4;
+    @include variables.mobile {
+        display: none;
     }
 }
 
-ul {
+.careers-menu_header > ul {
     display: flex;
     flex-direction: row;
     list-style: none;
 }
 
-li a {
-    display: inline;
+.careers-menu_header > li > a {
     margin: 10px;
     text-decoration: none;
     @include variables.p;
-}
-
-/* TITRE DE LA PAGE */
-.title__page {
-    padding: 70px 10%;
-    background-image: url("../images/background_header.jpg");
-    margin-bottom: 6%;
-
-    h1 {
-        @include variables.h1;
-        color: white;
-    }
 }
 
 /* DUAL DISPLAY FEATURES */
