@@ -10,7 +10,7 @@ body {
     width: 100%;
 }
 
-header{
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,7 +34,7 @@ nav {
     justify-content: center;
     margin: auto;
 
-    h4{
+    h4 {
         @include variables.h4;
         margin-right: 3.125rem;
     }
@@ -46,7 +46,7 @@ ul {
     list-style: none;
 }
 
-li a{
+li a {
     display: inline;
     margin: 10px;
     text-decoration: none;
@@ -54,16 +54,16 @@ li a{
 }
 
 .intro {
-    background-image: url('../Pictures/backgroundheader.jpg');
+    background-image: url("../Pictures/backgroundheader.jpg");
     background-size: cover;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    h1{
+    h1 {
         @include variables.h1;
         color: white;
         width: 500px;
@@ -76,7 +76,13 @@ li a{
         z-index: 10;
         left: 50rem;
         top: 21rem;
-        
+    }
+
+    .whitecircle {
+        position: absolute;
+        z-index: 5;
+        top: 26rem;
+        left: 83rem;
     }
 
     p {
@@ -93,26 +99,77 @@ li a{
         margin-left: 350px;
         margin-top: 50px;
     }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1,
+        p,
+        button {
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        .arrowheader {
+            position: absolute;
+            z-index: 10;
+            left: -5rem;
+            top: 31rem;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1,
+        p,
+        button {
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        .arrowheader {
+            position: absolute;
+            z-index: 10;
+            left: -20rem;
+            top: 31rem;
+        }
+    }
 }
 
 .bloc1 {
     display: flex;
     flex-direction: row;
     margin-top: 160px;
+    margin-left: 165px;
     align-items: center;
     justify-content: space-between;
     width: 79.688rem;
-    height: 291px;
-    margin-left: 165px;
 
     .bloc1 article {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 350px;
     }
 
     img {
         margin-bottom: 40px;
+        width: 96px;
+        height: 96px;
     }
 
     h4 {
@@ -121,9 +178,42 @@ li a{
 
     p {
         @include variables.p;
-        color: #939CAA;
+        color: #939caa;
         margin-top: 20px;
-        width: 75%;
+        padding-right: 6rem;
+    }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 3rem;
+
+        article {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .picto {
+            margin-right: 10rem;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem;
+        width: 100%;
+        text-align: center;
+
+        article {
+            width: 100%;
+        }
     }
 }
 
@@ -151,7 +241,7 @@ li a{
     .arrow1 {
         position: absolute;
         z-index: 5;
-        top : 18.75rem;
+        top: 18.75rem;
         margin-left: 31.25rem;
     }
 
@@ -159,7 +249,7 @@ li a{
         @include variables.h2;
         margin-bottom: 20px;
     }
-    
+
     p {
         @include variables.p;
         margin-bottom: 30px;
@@ -167,6 +257,54 @@ li a{
 
     button {
         @include variables.button;
+    }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        article {
+            text-align: center;
+            margin: 3rem auto;
+        }
+
+        .arrow1 {
+            position: absolute;
+            z-index: 5;
+            top: 18.75rem;
+            margin-right: 20rem;
+        }
+
+        button {
+            margin: auto;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        article {
+            text-align: center;
+            margin: 3rem auto;
+        }
+
+        .arrow1 {
+            position: absolute;
+            z-index: 5;
+            top: 18.75rem;
+            margin-right: 20rem;
+        }
+
+        button {
+            margin: auto;
+        }
     }
 }
 
@@ -178,8 +316,6 @@ li a{
     align-items: center;
     margin-left: 165px;
     margin-right: 100px;
-    justify-content: flex-start;
-
 
     article {
         display: flex;
@@ -195,7 +331,7 @@ li a{
     .arrow2 {
         position: absolute;
         z-index: 5;
-        top : 0rem;
+        top: 0rem;
         margin-left: -10rem;
     }
 
@@ -203,7 +339,7 @@ li a{
         @include variables.h2;
         margin-bottom: 20px;
     }
-    
+
     p {
         @include variables.p;
         margin-bottom: 30px;
@@ -211,6 +347,54 @@ li a{
 
     button {
         @include variables.button;
+    }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        article {
+            text-align: center;
+            margin: 3rem auto;
+        }
+
+        .arrow2 {
+            position: absolute;
+            z-index: 5;
+            top: 1rem;
+            margin-right: 20rem;
+        }
+
+        button {
+            margin: auto;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        article {
+            text-align: center;
+            margin: 3rem auto;
+            width: 100%;
+        }
+
+        .arrow2 {
+            position: absolute;
+            z-index: 5;
+            top: 1rem;
+            margin-right: 0rem;
+        }
+
+        button {
+            margin: auto;
+        }
     }
 }
 
@@ -240,7 +424,7 @@ li a{
     .arrow3 {
         position: absolute;
         z-index: 10;
-        top : 5rem;
+        top: 5rem;
         margin-left: 60rem;
     }
 
@@ -248,7 +432,7 @@ li a{
         @include variables.h2;
         margin-bottom: 20px;
     }
-    
+
     p {
         @include variables.p;
         margin-bottom: 30px;
@@ -257,182 +441,52 @@ li a{
     button {
         @include variables.button;
     }
-}
 
-footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #495567;
-    width: 100%;
-
-    .text_footer {
+    @include variables.tablet {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-left: 165px;
-        margin-right: 200px;
+        flex-direction: column-reverse;
+        justify-content: center;
         align-items: center;
-        height: 300px;
+        margin: auto;
 
-        .dowload {
-            width: 9.938rem;
-            height: 56px;
-            display: flex;
-            flex-direction: row;
+        article {
+            text-align: center;
+            margin: 3rem auto;
         }
 
-        h2 {
-            @include variables.h2;
-            color: white;
-            width: 25.938rem;
+        .arrow3 {
+            position: absolute;
+            z-index: 5;
+            top: 1rem;
+            margin-right: 20rem;
         }
-    }
 
-    .bottom_page {
-        display: flex;
-        flex-direction: row;
-        background-color: #333A44;
-        justify-content: space-between;
-        height: 4rem;
-
-
-        .social_media {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 120px;
-            height: 24px;
+        button {
             margin: auto;
         }
-
-        .nav_footer {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            width: 69.125rem;
-            margin-left: 165px;
-            
-            h4{
-                @include variables.h4;
-                color: white;
-                margin-right: 3.125rem;
-            }
-        }
-        
-        ul {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-        }
-        
-        li a{
-            display: inline;
-            margin: 10px;
-            text-decoration: none;
-            @include variables.p;
-            color: white;
-        }
     }
 
-}
-
-@media (max-width: 1024px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    nav {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-
-        h4 {
-            margin-right: 0;
-            margin-bottom: 10px;
-        }
-    }
-
-    .intro {
-        height: auto;
-        h1, p, button {
-            margin-left: 20px;
-        }
-    }
-
-    .bloc1, .bloc2, .bloc3, .bloc4 {
-        flex-direction: column;
-        margin: 0 20px;
-        width: auto;
-        align-items: flex-start;
-
-        article {
-            width: 100%;
-        }
-
-        img {
-            margin: 20px 0;
-        }
-    }
-
-    footer .text_footer, footer .bottom_page {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        .dowload {
-            justify-content: center;
-        }
-    }
-}
-
-// Media Query pour Mobile (petits écrans)
-@media (max-width: 768px) {
-    header {
-        height: auto;
-    }
-
-    nav {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .intro {
-        height: auto;
-        padding: 20px;
-        
-        h1 {
-            width: 100%;
-            margin-left: 0;
-        }
-        
-        p, button {
-            width: 100%;
-            margin-left: 0;
-        }
-    }
-
-    .bloc1, .bloc2, .bloc3, .bloc4 {
-        margin: 20px;
-        flex-direction: column;
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
         align-items: center;
 
         article {
-            width: 100%;
             text-align: center;
-        }
-    }
-
-    footer {
-        .text_footer, .bottom_page {
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-        }
-
-        .social_media, .nav_footer {
-            justify-content: center;
+            margin: 3rem auto;
             width: 100%;
+        }
+
+        .arrow3 {
+            position: absolute;
+            z-index: 5;
+            right: -9rem;
+            top: -3rem;
+        }
+
+        button {
+            margin: auto;
         }
     }
 }

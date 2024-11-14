@@ -6,65 +6,6 @@
     box-sizing: border-box;
 }
 
-.careers-page > header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 96px;
-
-    h4 {
-        @include variables.h4;
-
-        @include variables.mobile {
-            margin: 0 auto;
-        }
-    }
-}
-
-.careers-page > header > h4 {
-    @include variables.tablet {
-        margin-left: 10%;
-    }
-}
-
-.careers-page > .careers-header_button {
-    height: auto;
-    margin-left: auto;
-    @include variables.button;
-}
-
-.careers-header_menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 82rem;
-    height: auto;
-    justify-content: center;
-    margin: auto;
-
-    @include variables.tablet {
-        margin: 0 10%;
-    }
-
-    @include variables.mobile {
-        display: none;
-    }
-}
-
-.careers-menu_header > ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-}
-
-.careers-menu_header > li > a {
-    margin: 10px;
-    text-decoration: none;
-    @include variables.p;
-}
-
 /* DUAL DISPLAY FEATURES */
 
 .DisplayFeatures__Content {
@@ -98,6 +39,11 @@
         display: flex;
         flex-direction: column-reverse;
     }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 .DisplayFeatures__Row1 > .DisplayFeatures__Content {
@@ -109,12 +55,22 @@
         margin: 0 auto;
         margin-top: 5%;
     }
+
+    @include variables.mobile {
+        margin: 0 auto;
+        margin-top: 5%;
+        text-align: center;
+    }
 }
 
 .DisplayFeatures__Row1 > .DisplayFeatures__Images {
     grid-area: 1 / 2 / 2 / 3;
 
     @include variables.tablet {
+        margin-left: auto;
+    }
+
+    @include variables.mobile {
         margin-left: auto;
     }
 }
@@ -125,6 +81,19 @@
     img:first-child {
     border-radius: 50%;
     margin-right: 50px;
+
+    @include variables.mobile {
+        margin-right: 140px;
+    }
+}
+
+.DisplayFeatures__Row1
+    > .DisplayFeatures__Images
+    > .DF__Images__Row1
+    img:nth-child(2) {
+    @include variables.mobile {
+        display: none;
+    }
 }
 
 .DisplayFeatures__Row1 > .DisplayFeatures__Images > .DF__Images__Row2 {
@@ -163,12 +132,21 @@
         display: flex;
         flex-direction: column;
     }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-.value_column1 {
+.value__column1 {
     grid-area: 1 / 1 / 2 / 2;
 
     @include variables.tablet {
+        margin: 5% 0;
+    }
+
+    @include variables.mobile {
         margin: 5% 0;
     }
 }
@@ -179,12 +157,20 @@
     @include variables.tablet {
         margin: 5% 0;
     }
+
+    @include variables.mobile {
+        margin: 5% 0;
+    }
 }
 
 .value__column3 {
     grid-area: 1 / 3 / 2 / 4;
 
     @include variables.tablet {
+        margin: 5% 0;
+    }
+
+    @include variables.mobile {
         margin: 5% 0;
     }
 }
@@ -232,6 +218,16 @@
 
     button {
         @include variables.button;
+    }
+
+    @include variables.mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+
+        button {
+            margin: 0 auto;
+        }
     }
 }
 
