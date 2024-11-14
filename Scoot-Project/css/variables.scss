@@ -51,6 +51,52 @@ $lexendDeca: "Lexend Deca";
     color: #495567;
 }
 
+@mixin button {
+    width: 195px;
+    height: 53px;
+    background-color: $yellow;
+    color: white;
+    font-family: $spaceMono;
+    line-height: 25px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: transparent;
+        color: $yellow;
+        border: 1px solid $yellow;
+    }
+}
+
+/* BREAKPOINT DESKTOP */
+$breakpoint-desktop-min: 1025px;
+
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop-min) {
+        @content;
+    }
+}
+
+/* BREAKPOINT TABLET */
+$breakpoint-tablet-min: 768px;
+$breakpoint-tablet-max: 1024px;
+
+@mixin tablet {
+    @media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+        @content;
+    }
+}
+
+/* BREAKPOINT MOBILE */
+$breakpoint-mobile-max: 767px;
+$breakpoint-mobile-min: 320px;
+
+@mixin mobile {
+    @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
+        @content;
+    }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");

@@ -5,3 +5,488 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 96px;
+}
+
+header nav button {
+    height: auto;
+    margin-left: auto;
+    @include variables.button;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 69.125rem;
+    height: auto;
+    justify-content: center;
+    margin: auto;
+
+    h4 {
+        @include variables.h4;
+        margin-right: 3.125rem;
+    }
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+li a {
+    display: inline;
+    margin: 10px;
+    text-decoration: none;
+    @include variables.p;
+}
+
+.intro {
+    background-image: url("../Pictures/backgroundheader.jpg");
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        @include variables.h1;
+        color: white;
+        width: 500px;
+        height: 112px;
+        margin-left: 200px;
+    }
+
+    .arrowheader {
+        position: absolute;
+        z-index: 10;
+        left: 50rem;
+        top: 21rem;
+    }
+
+    .whitecircle {
+        position: absolute;
+        z-index: 5;
+        top: 26rem;
+        left: 83rem;
+    }
+
+    p {
+        @include variables.p;
+        color: white;
+        width: 405px;
+        height: 100px;
+        margin-left: 350px;
+        margin-top: 50px;
+    }
+
+    button {
+        @include variables.button;
+        margin-left: 350px;
+        margin-top: 50px;
+    }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1,
+        p,
+        button {
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        .arrowheader {
+            position: absolute;
+            z-index: 10;
+            left: -5rem;
+            top: 31rem;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1,
+        p,
+        button {
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        .arrowheader {
+            position: absolute;
+            z-index: 10;
+            left: -20rem;
+            top: 31rem;
+        }
+    }
+}
+
+.bloc1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 160px;
+    margin-left: 165px;
+    align-items: center;
+    justify-content: space-between;
+    width: 79.688rem;
+
+    .bloc1 article {
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+    }
+
+    img {
+        margin-bottom: 40px;
+        width: 96px;
+        height: 96px;
+    }
+
+    h4 {
+        @include variables.h4;
+    }
+
+    p {
+        @include variables.p;
+        color: #939caa;
+        margin-top: 20px;
+        padding-right: 6rem;
+    }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 3rem;
+
+        article {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .picto {
+            margin-right: 10rem;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem;
+        width: 100%;
+        text-align: center;
+
+        article {
+            width: 100%;
+        }
+    }
+}
+
+.bloc2 {
+    margin-top: 200px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 165px;
+    margin-right: 100px;
+    justify-content: center;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 27.813rem;
+        margin-left: 0px;
+    }
+
+    img {
+        margin: auto;
+    }
+
+    .arrow1 {
+        position: absolute;
+        z-index: 5;
+        top: 18.75rem;
+        margin-left: 31.25rem;
+    }
+
+    h2 {
+        @include variables.h2;
+        margin-bottom: 20px;
+    }
+
+    p {
+        @include variables.p;
+        margin-bottom: 30px;
+    }
+
+    button {
+        @include variables.button;
+    }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        article {
+            text-align: center;
+            margin: 3rem auto;
+        }
+
+        .arrow1 {
+            position: absolute;
+            z-index: 5;
+            top: 18.75rem;
+            margin-right: 20rem;
+        }
+
+        button {
+            margin: auto;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        article {
+            text-align: center;
+            margin: 3rem auto;
+        }
+
+        .arrow1 {
+            position: absolute;
+            z-index: 5;
+            top: 18.75rem;
+            margin-right: 20rem;
+        }
+
+        button {
+            margin: auto;
+        }
+    }
+}
+
+.bloc3 {
+    margin-top: 160px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 165px;
+    margin-right: 100px;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 27.813rem;
+        margin: auto;
+    }
+
+    img {
+        margin-left: 0px;
+    }
+
+    .arrow2 {
+        position: absolute;
+        z-index: 5;
+        top: 0rem;
+        margin-left: -10rem;
+    }
+
+    h2 {
+        @include variables.h2;
+        margin-bottom: 20px;
+    }
+
+    p {
+        @include variables.p;
+        margin-bottom: 30px;
+    }
+
+    button {
+        @include variables.button;
+    }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        article {
+            text-align: center;
+            margin: 3rem auto;
+        }
+
+        .arrow2 {
+            position: absolute;
+            z-index: 5;
+            top: 1rem;
+            margin-right: 20rem;
+        }
+
+        button {
+            margin: auto;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        article {
+            text-align: center;
+            margin: 3rem auto;
+            width: 100%;
+        }
+
+        .arrow2 {
+            position: absolute;
+            z-index: 5;
+            top: 1rem;
+            margin-right: 0rem;
+        }
+
+        button {
+            margin: auto;
+        }
+    }
+}
+
+.bloc4 {
+    margin-top: 160px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 165px;
+    margin-right: 100px;
+    justify-content: space-between;
+    margin-bottom: 150px;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 27.813rem;
+        margin-left: 0px;
+    }
+
+    img {
+        margin: auto;
+        border-radius: 50%;
+    }
+
+    .arrow3 {
+        position: absolute;
+        z-index: 10;
+        top: 5rem;
+        margin-left: 60rem;
+    }
+
+    h2 {
+        @include variables.h2;
+        margin-bottom: 20px;
+    }
+
+    p {
+        @include variables.p;
+        margin-bottom: 30px;
+    }
+
+    button {
+        @include variables.button;
+    }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        article {
+            text-align: center;
+            margin: 3rem auto;
+        }
+
+        .arrow3 {
+            position: absolute;
+            z-index: 5;
+            top: 1rem;
+            margin-right: 20rem;
+        }
+
+        button {
+            margin: auto;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+        article {
+            text-align: center;
+            margin: 3rem auto;
+            width: 100%;
+        }
+
+        .arrow3 {
+            position: absolute;
+            z-index: 5;
+            right: -9rem;
+            top: -3rem;
+        }
+
+        button {
+            margin: auto;
+        }
+    }
+}

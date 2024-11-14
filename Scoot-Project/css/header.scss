@@ -1,0 +1,71 @@
+@use "variables";
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 96px;
+
+    h4 {
+        margin: 0 30px 0 165px;
+        a {
+            @include variables.h4;
+            text-decoration: none;
+        }
+
+        @include variables.mobile {
+            margin: 0 auto;
+        }
+    }
+}
+
+.header_menu > h4 {
+    @include variables.h4;
+    @include variables.tablet {
+        margin-left: 10%;
+    }
+}
+
+.header_button {
+    height: auto;
+    margin-left: auto;
+    margin-right: 165px;
+    @include variables.button;
+}
+
+.header_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 82rem;
+    height: auto;
+    justify-content: center;
+    margin: auto;
+
+    @include variables.tablet {
+        margin: 0 10%;
+    }
+
+    @include variables.mobile {
+        display: none;
+    }
+}
+
+.header_menu > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.header_menu > ul > li > a {
+    margin: 10px;
+    text-decoration: none;
+    @include variables.p;
+
+    &:hover {
+        cursor: pointer;
+        color: variables.$yellow;
+    }
+}

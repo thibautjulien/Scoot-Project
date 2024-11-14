@@ -1,0 +1,231 @@
+@use "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.title__page {
+    padding: 70px 10%;
+    background-image: url("../Pictures/header_background.svg");
+    margin-bottom: 6%;
+
+    h1 {
+        @include variables.h1;
+        color: white;
+        margin-left: 3%;
+    }
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .big-map {
+        margin-left: 165px;
+        margin-right: 165px;
+        margin-bottom: 5%;
+        width: 100%;
+        @include variables.mobile {
+            display: none;
+        }
+    }
+
+    .mobile-map {
+        @include variables.tablet {
+            display: none;
+        }
+        @include variables.desktop {
+            display: none;
+        }
+    }
+}
+
+.country-mobile {
+    display: none;
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            background-color: #fff4df;
+            color: #495567;
+            width: 19.438rem;
+            text-align: center;
+            height: 4.5rem;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include variables.p;
+            line-height: 28px;
+            font-weight: bold;
+
+            &:hover {
+                background-color: transparent;
+                border: 1px solid #fff4df;
+            }
+        }
+    }
+}
+
+.below_map {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 165px;
+    margin-right: 165px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+
+    h2 {
+        @include variables.h2;
+        width: 21.938rem;
+    }
+
+    p {
+        @include variables.p;
+        width: 27.813rem;
+    }
+
+    button {
+        @include variables.button;
+        width: 11.25rem;
+    }
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+
+        p {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        button {
+            margin-bottom: 5rem;
+        }
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+        width: 100vw;
+
+        .map {
+            width: 100%;
+        }
+
+        h2 {
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        button {
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #495567;
+    width: 100%;
+
+    .text_footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 165px;
+        margin-right: 165px;
+        align-items: center;
+        height: 300px;
+
+        .dowload {
+            width: 9.938rem;
+            height: 56px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        h2 {
+            @include variables.h2;
+            color: white;
+            width: 25.938rem;
+        }
+    }
+
+    .bottom_page {
+        display: flex;
+        flex-direction: row;
+        background-color: #333a44;
+        justify-content: space-between;
+        height: 4rem;
+
+        .social_media {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 120px;
+            height: 24px;
+            margin-right: 165px;
+        }
+
+        .nav_footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 69.125rem;
+            margin-left: 165px;
+
+            h4 a {
+                @include variables.h4;
+                color: white;
+                margin-right: 3.125rem;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+        }
+
+        li a {
+            display: inline;
+            margin: 10px;
+            text-decoration: none;
+            @include variables.p;
+            color: white;
+        }
+    }
+}
