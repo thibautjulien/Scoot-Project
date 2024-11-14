@@ -75,6 +75,11 @@ body {
             @include variables.p;
             line-height: 28px;
             font-weight: bold;
+
+            &:hover {
+                background-color: transparent;
+                border: 1px solid #fff4df;
+            }
         }
     }
 }

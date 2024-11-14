@@ -114,6 +114,11 @@ footer {
     font-family: variables.$spaceMono;
     color: variables.$dimGrey;
     font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+        color: variables.$yellow;
+    }
 }
 
 .footer__bottom__socials {

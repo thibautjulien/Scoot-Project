@@ -63,4 +63,9 @@ header {
     margin: 10px;
     text-decoration: none;
     @include variables.p;
+
+    &:hover {
+        cursor: pointer;
+        color: variables.$yellow;
+    }
 }

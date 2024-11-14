@@ -334,7 +334,12 @@
     background-color: variables.$snow;
     padding: 30px;
     margin: 15px 0;
+
+    &:hover {
+        background-color: variables.$lightYellow;
+    } 
 }
+
 
 .FAQ__question__title > h4 {
     @include variables.h4;
@@ -345,7 +350,34 @@
     margin-top: 20px;
 }
 
+.FAQ__question__answer > details > summary > h4 {
+    @include variables.h4
+}
+
+.FAQ__question__answer > details > p {
+    @include variables.p
+}
+
 .FAQ__question__title {
     display: flex;
     justify-content: space-between;
 }
+
+details > summary {
+    display: inline-flex;
+    align-items: center; 
+    cursor: pointer; 
+  }
+  
+  details > summary::after {
+    content: ">";
+    color: #fcb72b;
+    font-size: 30px;
+    margin-left: 25rem; 
+    transition: transform 0.3s ease; 
+  }
+  
+  details[open] > summary::after {
+    transform: rotate(90deg); 
+  }
+

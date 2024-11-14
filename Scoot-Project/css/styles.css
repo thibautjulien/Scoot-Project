@@ -931,6 +931,9 @@ li a {
   padding: 30px;
   margin: 15px 0;
 }
+.FAQ__question__answer:hover {
+  background-color: #fff4df;
+}
 
 .FAQ__question__title > h4 {
   font-size: 24px;
@@ -949,9 +952,43 @@ li a {
   margin-top: 20px;
 }
 
+.FAQ__question__answer > details > summary > h4 {
+  font-size: 24px;
+  font-family: "Space Mono";
+  line-height: 28px;
+  letter-spacing: -1.07px;
+  color: #495567;
+}
+
+.FAQ__question__answer > details > p {
+  font-size: 15px;
+  font-family: "Lexend Deca";
+  line-height: 25px;
+  font-weight: 300;
+  color: #495567;
+}
+
 .FAQ__question__title {
   display: flex;
   justify-content: space-between;
+}
+
+details > summary {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+details > summary::after {
+  content: ">";
+  color: #fcb72b;
+  font-size: 30px;
+  margin-left: 25rem;
+  transition: transform 0.3s ease;
+}
+
+details[open] > summary::after {
+  transform: rotate(90deg);
 }
 
 * {
@@ -1339,6 +1376,10 @@ body {
     line-height: 28px;
     font-weight: bold;
   }
+  .country-mobile li:hover {
+    background-color: transparent;
+    border: 1px solid #fff4df;
+  }
 }
 
 .below_map {
@@ -1596,6 +1637,10 @@ header h4 a {
   font-weight: 300;
   color: #495567;
 }
+.header_menu > ul > li > a:hover {
+  cursor: pointer;
+  color: #fcb72b;
+}
 
 /* Footer */
 footer {
@@ -1728,6 +1773,10 @@ footer {
   font-family: "Space Mono";
   color: #939caa;
   font-weight: bold;
+}
+.footer__bottom__menu > ul > li:hover {
+  cursor: pointer;
+  color: #fcb72b;
 }
 
 .footer__bottom__socials {
