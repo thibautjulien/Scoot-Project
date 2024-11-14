@@ -1,0 +1,134 @@
+@use "variables";
+/* Footer */
+
+footer {
+    margin-top: 10%;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: variables.$darkNavy;
+    padding: 120px 10%;
+
+    @include variables.tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+.footer__top__text {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.footer__top__text > h2 {
+    @include variables.h2;
+    color: white;
+    text-align: left;
+
+    @include variables.tablet {
+        text-align: center;
+    }
+
+    @include variables.mobile {
+        text-align: center;
+    }
+}
+
+.footer__top__stores {
+    grid-area: 1 / 2 / 2 / 3;
+    text-align: right;
+
+    @include variables.tablet {
+        text-align: center;
+    }
+
+    @include variables.mobile {
+        text-align: center;
+    }
+}
+
+.footer__top__stores > img:first-child {
+    margin-right: 1.3%;
+}
+
+.footer__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #333a44;
+    align-items: center;
+    padding: 25px 10%;
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footer__bottom__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    grid-area: 1 / 1 / 2 / 2;
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+}
+
+.footer__bottom__menu > h4 {
+    @include variables.h3;
+    color: white;
+}
+
+.footer__bottom__menu > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    @include variables.mobile {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.footer__bottom__menu > ul > li {
+    font-family: variables.$spaceMono;
+    color: variables.$dimGrey;
+    font-weight: bold;
+}
+
+.footer__bottom__socials {
+    grid-area: 1 / 2 / 2 / 3;
+    text-align: right;
+
+    @include variables.mobile {
+        text-align: center;
+    }
+}
+
+.footer__bottom__socials > img {
+    margin: 0 1%;
+
+    @include variables.mobile {
+        margin: 0 20px;
+    }
+}
