@@ -18,3 +18,7 @@ We had to do this work in duo with a colleague from the training.
 Here you'll find the **[FIGMA FILE](coach.md)**
 
 Thanks to Figma, you can click and select different elements of the model and have an indication of each of them in the right column.
+
+### Github Pages
+
+If you want to have an overview of the site, here is : **[Site](https://thibautjulien.github.io/Scoot-Project/)**
